@@ -191,7 +191,7 @@ call plug#end()
 
 "" vim-airline
 " VSCodeのテーマ
-let g:airline_theme = 'codedark'
+let g:airline_theme = 'minimalist'
 " powerlineを有効にする
 "let g:airline_powerline_fonts = 1
 " タブラインを表示する
