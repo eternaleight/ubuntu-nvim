@@ -1,0 +1,5 @@
+{
+  "tailwindcss.filetypes": ["javascript", "typescript", "vue"],
+  "coc.source.ultisnips.enable": true,
+  "python.pythonPath": "/home/linuxbrew/.linuxbrew/bin/python3"
+}
