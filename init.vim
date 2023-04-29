@@ -25,6 +25,10 @@ noremap <Space>q :<C-u>q<CR>
 nmap <C-f> :NERDTreeToggle<CR>
 noremap <Space>f :GoFmt<CR>
 
+" 矩形選択
+nnoremap fj <C-v>
+vnoremap fj <C-v>
+
 
 let NERDTreeWinSize=18
 """"""""""""""""""""""""""""""""""""""
@@ -246,7 +250,7 @@ fun! FzfOmniFiles()
     :GitFiles
   endif
 endfun
-nnoremap <C-p> :call FzfOmniFiles()<CR>
+nnoremap fi :call FzfOmniFiles()<CR>
 
 " 文字列検索を開く
 " <S-?>でプレビューを表示/非表示する
@@ -529,6 +533,10 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let g:user_emmet_leader_key = '<C-e>'
 
 
+"" ノーマルモードの塗りつぶしカーソルの色を変更
+highlight Normal guibg=#0000FF
+" インサートモードの塗りつぶしカーソルの色を変更
+highlight Insert guibg=#FF0000
 "window移動
 "window右
 nnoremap <C-h> <C-w>h
@@ -587,3 +595,6 @@ let g:coc_global_extensions = ['coc-omnisharp']
 autocmd FileType cs setlocal omnifunc=v:lua.vim.lsp.omnifunc
 set guifont=Powerline_Font
 hi Normal ctermbg=none guibg=none
+" set termguicolors
+highlight Cursor guifg=#0000FF gui=NONE
+highlight iCursor guifg=#0000FF gui=NONE
