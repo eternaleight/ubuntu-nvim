@@ -571,14 +571,6 @@ autocmd BufNewFile,BufRead * call s:DetectEjs()
 " autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
 " augroup END
 
-""neovimからクリップボードへのアクセス
-"set clipboard=unnamed
-""*y クリップボードにヤンク
-":silent !pbcopy
-
-""*p クリップボードにペースト
-":r !pbpaste
-
 " Neovim performance settings
 set lazyredraw
 set ttyfast
@@ -595,6 +587,7 @@ let g:coc_global_extensions = ['coc-omnisharp']
 autocmd FileType cs setlocal omnifunc=v:lua.vim.lsp.omnifunc
 set guifont=Powerline_Font
 hi Normal ctermbg=none guibg=none
+
 " set termguicolors
 highlight Cursor guifg=#0000FF gui=NONE
 highlight iCursor guifg=#0000FF gui=NONE
